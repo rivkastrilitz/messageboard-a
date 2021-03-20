@@ -6,18 +6,41 @@
 
 using namespace ariel;
 
+int is_posted( Board ba ,u_int row,u_int col, Direction d, string s){
+    string str=ba.read(row,col,d,s.length());
+    if(str==s)return 1;
+    return 0;
+}
 
 
-TEST_CASE("valid input"){
+TEST_CASE("good"){
    
     Board b;
-    b.post(10,10,H,"hello");
+    string message="hello";
+    for(int i=0;i<10;i++){
+      b.post(i,i,Direction::Horizontal,message);  
+    }
+    
+    for(int i=0;i<10;i++){
+        int n=is_posted(b,i,i,Direction::Horizontal,message);
+        CHECK(n==1);
+    }
+    
+    //chek sub message
+
+    
+
+
+
+    //chek where empty
+
+
 
 
 
 }
 
-TEST_CASE("invalid input"){
+TEST_CASE("bad"){
 
 
 
