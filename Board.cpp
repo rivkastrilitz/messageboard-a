@@ -2,24 +2,26 @@
 #include "Direction.hpp"
 #include <string>
 using namespace std;
-using namespace ariel;
+using ariel::Direction;
 
-
-class Board{
-
-
-    void post(u_int row ,u_int col, Direction d,string s){
+    ariel::Board::Board(){
 
     }
 
-    string read(u_int row ,u_int col, Direction d,u_int n){
+
+    void ariel::Board::post(u_int row ,u_int col, Direction d, string  s){
+
+    }
+
+    string ariel::Board::read(u_int row ,u_int col, Direction d,u_int n){
+
         return "";
+       
 
     }
 
-    void show()const{
+    void ariel::Board::show (){
 
     }
 
 
-};
